@@ -1,0 +1,53 @@
+
+TASTE – Style Guide (TXT Version)
+===============================
+
+1. TYPOGRAFIA
+-------------
+| Element                                    | Font       | Rozmiar (px) | Styl / Transformacja     |
+|--------------------------------------------|------------|--------------|---------------------------|
+| Logo „TASTE”                               | Sans-serif | 72–80        | Bold, UPPERCASE           |
+| „ENGAGE IN ART”                            | Sans-serif | 14           | Light, UPPERCASE          |
+| Menu: HOME / SEARCH / DISCOVER             | Sans-serif | 16           | Bold, UPPERCASE           |
+| Nagłówki sekcji (DISCOVER, SEARCH)         | Sans-serif | 32–36        | Bold, UPPERCASE           |
+| Podtytuły („Give it a try!”, „Name”)       | Sans-serif | 16           | Regular                   |
+| Info tekst („We have found 3 songs…”)      | Sans-serif | 14           | Italic / Light            |
+| Tytuły utworów                              | Sans-serif | 16–18        | Bold                      |
+| Kategorie / Ranking                        | Sans-serif | 12–14        | Light / Grey              |
+| Stopka: „All rights reserved”              | Sans-serif | 10–12        | Light                     |
+
+2. KOLORYSTYKA
+---------------
+| Element                        | Kolor      | HEX        |
+|-------------------------------|------------|------------|
+| Tło                           | Czarne     | #121212    |
+| Główna czcionka               | Biały      | #FFFFFF    |
+| Subtelny tekst                | Szary      | #AAAAAA    |
+| Przycisk „SEARCH”             | Czerwony   | #D64949    |
+| Pasek odtwarzacza – playhead  | Czerwony   | #D64949    |
+| Tło odtwarzacza               | Biały      | #FFFFFF    |
+
+3. LAYOUT
+--------
+- Układ wyśrodkowany (kolumna, flex-column).
+- Duże marginesy i paddingi.
+- Spójna struktura dla wszystkich podstron.
+
+4. ZMIENNE CSS
+--------------
+:root {
+  --color-bg: #121212;
+  --color-text-main: #FFFFFF;
+  --color-text-subtle: #AAAAAA;
+  --color-accent: #D64949;
+  --color-footer-text: #888888;
+
+  --font-main: 'Montserrat', sans-serif;
+
+  --text-logo: 80px;
+  --text-nav: 16px;
+  --text-header: 36px;
+  --text-subheader: 16px;
+  --text-small: 12px;
+  --text-footer: 10px;
+}

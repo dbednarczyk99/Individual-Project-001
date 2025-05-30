@@ -1,0 +1,71 @@
+{
+    "songs": [
+        {
+            "id": 1,
+            "title": "At The Top",
+            "author": "David Renda",
+            "filename": "At_The_Top_David_Renda.mp3",
+            "categories": ["Powerful", "Mystery"],
+            "ranking": 1
+        },
+        {
+            "id": 2,
+            "title": "Silly Feet",
+            "author": "David Renda",
+            "filename": "Silly_Feet_David_Renda.mp3",
+            "categories": ["Relax", "Fun"],
+            "ranking": 2
+        },
+        {
+            "id": 3,
+            "title": "Western adventures",
+            "author": "David Fesliyan",
+            "filename": "Western_Adventures_-_David_Fesliyan.mp3",
+            "categories": ["Fun", "Western"],
+            "ranking": 4
+        },
+        {
+            "id": 4,
+            "title": "Bass trap",
+            "author": "Steve Oxen",
+            "filename": "BASS_TRAP_Steve_Oxen.mp3",
+            "categories": ["Powerful", "Insomnia"],
+            "ranking": 3
+        },
+        {
+            "id": 5,
+            "title": "Layla",
+            "author": "Derek and the Dominos",
+            "filename": "Layla_Derek_and_the_Dominos.mp3",
+            "categories": ["Rock", "Romantic"],
+            "ranking": 7
+        },
+        {
+            "id": 6,
+            "title": "Papieros",
+            "author": "Video",
+            "filename": "Papieros_-_Video.mp3",
+            "categories": ["Rock", "Fun"],
+            "ranking": 6
+        },
+        {
+            "id": 7,
+            "title": "Autobiografia",
+            "author": "Perfect",
+            "filename": "Autobiografia_-_Perfect.mp3",
+            "categories": ["Rock", "Nostalgic"],
+            "ranking": 8
+        },
+        {
+            "id": 8,
+            "title": "Nothing Else Matters",
+            "author": "Metallica",
+            "filename": "Nothing_Else_Matters_-_Metallica.mp3",
+            "categories": ["Powerful", "Rock"],
+            "ranking": 5
+        }
+    ],
+    "data": [
+        { "loaded": "true" }
+    ]
+}
