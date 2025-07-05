@@ -1,17 +1,33 @@
 body {
-  margin: 0;
   font-family: var(--font-main);
   background-color: var(--color-bg);
   color: var(--color-text-main);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  p, label, .song__title {
+    letter-spacing: 2px;
+  }
 }
 
 footer {
   font-size: var(--text-small);
   color: var(--color-text-subtle);
-  margin: 50px 0;
+  margin: 20px 0;
+  text-align: center;
+}
+
+section {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  align-content: center;
+  flex-direction: column;
+}
+.songs-wrapper { 
+  margin: auto;
+  width: 500px;
+  max-width: 600px;
 }
 
 #pages > section {
@@ -20,4 +36,17 @@ footer {
 
 #pages > section.active {
   display: block;
+}
+
+button {
+  background-color: var(--color-accent);
+  color: var(--color-text-main);
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: var(--text-small);
 }

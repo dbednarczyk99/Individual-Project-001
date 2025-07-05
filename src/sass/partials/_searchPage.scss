@@ -1,5 +1,32 @@
-footer {
-  font-size: var(--text-small);
-  color: var(--color-text-subtle);
-  margin: 50px 0;
+.search-bar {
+  margin-top: 16px;
+  margin-bottom: 60px;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.search-form-row {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+label {
+  align-self: center;
+}
+input, select {
+  border: none;
+  border-radius: 6px;
+  padding: 0.3rem 1rem;
+  width: 200px;
+  font-family: var(--font-main);
+}
+
+.search-page-wrapper {
+  margin-bottom: 50px;
 }

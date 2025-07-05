@@ -4,7 +4,7 @@
             "id": 1,
             "title": "At The Top",
             "author": "David Renda",
-            "filename": "At_The_Top_David_Renda.mp3",
+            "filename": "At_The_Top_-_David_Renda.mp3",
             "categories": ["Powerful", "Mystery"],
             "ranking": 1
         },
@@ -12,7 +12,7 @@
             "id": 2,
             "title": "Silly Feet",
             "author": "David Renda",
-            "filename": "Silly_Feet_David_Renda.mp3",
+            "filename": "Silly_Feet_-_David_Renda.mp3",
             "categories": ["Relax", "Fun"],
             "ranking": 2
         },
@@ -21,23 +21,23 @@
             "title": "Western adventures",
             "author": "David Fesliyan",
             "filename": "Western_Adventures_-_David_Fesliyan.mp3",
-            "categories": ["Fun", "Western"],
+            "categories": ["Fun", "Pop"],
             "ranking": 4
         },
         {
             "id": 4,
             "title": "Bass trap",
             "author": "Steve Oxen",
-            "filename": "BASS_TRAP_Steve_Oxen.mp3",
-            "categories": ["Powerful", "Insomnia"],
+            "filename": "BASS_TRAP_-_Steve_Oxen.mp3",
+            "categories": ["Powerful", "Fun"],
             "ranking": 3
         },
         {
             "id": 5,
             "title": "Layla",
             "author": "Derek and the Dominos",
-            "filename": "Layla_Derek_and_the_Dominos.mp3",
-            "categories": ["Rock", "Romantic"],
+            "filename": "Layla_-_Derek_and_the_Dominos.mp3",
+            "categories": ["Rock", "Relax"],
             "ranking": 7
         },
         {
@@ -53,7 +53,7 @@
             "title": "Autobiografia",
             "author": "Perfect",
             "filename": "Autobiografia_-_Perfect.mp3",
-            "categories": ["Rock", "Nostalgic"],
+            "categories": ["Rock", "Relax"],
             "ranking": 8
         },
         {

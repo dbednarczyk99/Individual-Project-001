@@ -1,8 +1,7 @@
 header {
   text-align: center;
-  //margin: 40px 0;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   position: relative;
   background-image: url('../images/background.jpg');
   background-position: center center;
@@ -11,7 +10,7 @@ header {
 
   .header__content {
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     position: relative;
     background-image: linear-gradient(transparent, var(--color-bg));
 
@@ -20,24 +19,47 @@ header {
     align-items: center;
     .header__title {
         font-size: var(--text-logo);
-        //font-family: var(--font-main);
-        margin-block-start: 0;
+        font-family: var(--font-main);
+        font-weight: 900;
+        letter-spacing: 90px;
+        margin-left: 50px;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+    .header__subtitle {
+      text-transform: uppercase;
+      line-height: 50px;
+      font-size: var(--text-subheader);
+      letter-spacing: 15px;
+      font-weight: 600;
+      margin: 0;
     }
   }
 }
 
 
-
+.navigation {
+  width: 600px;
+}
 nav {
   display: flex;
-  gap: 40px;
+  width: 100%;
+  justify-content: space-around;
   margin: 30px 0;
   font-size: var(--text-nav);
   text-transform: uppercase;
   font-weight: bold;
+  letter-spacing: 2px;
+  
+  a {
+    text-decoration: none;
+    color: var(--color-text-subtle);
+  }
+
+  a.active {
+    color: var(--color-text-main);
+  }
+
 }
 
-nav a {
-  text-decoration: none;
-  color: var(--color-text-main);
-}
+

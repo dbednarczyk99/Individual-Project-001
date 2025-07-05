@@ -1,7 +1,7 @@
 import {settings, classNames, select } from './settings.js';
-
 import HomePage from './components/HomePage.js';
 import SearchPage from './components/SearchPage.js';
+import DiscoverPage from './components/DiscoverPage.js';
 
 const app = {
   initData: function(){
@@ -18,8 +18,27 @@ const app = {
       })
       .then(function(parsedResponse) {
           thisApp.data.songs = parsedResponse;
+          thisApp.prepareData();
           thisApp.initPages();
+          
       });
+  },
+
+  prepareData: function(){
+    const thisApp = this; 
+    //console.log(thisApp.data.songs);
+    let categories = [];
+    for(let song in thisApp.data.songs){
+      //console.log(thisApp.data.songs[song].categories);
+      for(let category in thisApp.data.songs[song].categories){
+        //console.log('Category:', category);
+        if(!categories.includes(thisApp.data.songs[song].categories[category])){
+          categories.push(thisApp.data.songs[song].categories[category]);
+        }
+      }
+    }
+    thisApp.data.categories = categories;
+    console.log('Categories:', thisApp.data.categories);
   },
 
   initPages: function(){
@@ -53,8 +72,8 @@ const app = {
     }
 
     new HomePage(thisApp.data.songs);
-    new SearchPage(thisApp.data.songs);
-    //new DiscoverPage(thisApp.data.songs);
+    new SearchPage(thisApp.data);
+    new DiscoverPage(thisApp.data);
   
   },
   activatePage: function(pageId){
@@ -70,6 +89,17 @@ const app = {
         navLink.getAttribute('href') === '#' + pageId
       );
     }
+    new DiscoverPage(thisApp.data);
+  },
+
+  preparePlayTracking: function(){
+    const thisApp = this;
+    if(!thisApp.data.playHistory){
+      thisApp.data.playHistory = {};
+    }
+    if(!thisApp.data.playedCategories){
+      thisApp.data.playedCategories = [];
+    }
   },
     
   init: function(){
@@ -77,6 +107,9 @@ const app = {
     console.log('*** App starting ***');
     
     thisApp.initData();
+    thisApp.preparePlayTracking();
+
+    window.thisApp = thisApp;
   }
 }
 

@@ -1,0 +1,24 @@
+.song {
+    .green-audio-player {
+        width: 100%;
+    }
+    .green-audio-player .slider .gap-progress .pin {
+        background-color: var(--color-accent);
+    }
+    .green-audio-player .slider .gap-progress {
+        background-color: var(--color-accent);
+    }
+    .green-audio-player .volume .volume__button.open path {
+        fill: var(--color-accent);
+    }
+
+    .song__description {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .song__title {
+        text-align: center;
+        padding: 30px 0 15px 0;
+    }
+}

@@ -12,24 +12,40 @@ export const select = {
     pages: '#pages',
     homePage: '.home-wrapper',
     searchPage: '.search-wrapper',
-    discoveryPage: '.discovery-wrapper',
+    discoverPage: '.discover-wrapper',
     songList: '.songs-wrapper',
-    audioPlayer: '.audio-player',
+    discoverSong: '.discover-song',
+    discoverInner: '.discover-page-wrapper',
   },
   templatesOf: {
     homePage: '#template-homePage',
     searchPage: '#template-searchPage',
     discoverPage: '#template-discoverPage',
     song: '#template-song',
+    discoverRefresh: '#template-discoverRefresh',
   },
   nav: {
     links: '.main-nav a',
   },
   search: {
-    input: '.search-input',
+    mainInput: '.search-input',
+    categorySelect: '.search-category-select',
     button: '.search-button',
     results: '.search-results',
   },
+  discover: {
+    button: '.discover-refresh-button',
+  },
+  musicWidget: {
+    audioPlayer: '.audio-player',
+    homePage: '.home-page-wrapper',
+    searchPage: '.search-page-wrapper',
+    discoverPage: '.discover-page-wrapper',
+    audio: 'audio',
+  },
+  categories: {
+    categoryItem: '.category-item',
+  }
 }
 
 export const classNames = {
@@ -38,12 +54,16 @@ export const classNames = {
   },
   nav: {
     active: 'active',
+  },
+  category: {
+    active: 'active',
   },    
 }
 
 export const templates = {
     homePage: Handlebars.compile(document.querySelector(select.templatesOf.homePage).innerHTML),
     searchPage: Handlebars.compile(document.querySelector(select.templatesOf.searchPage).innerHTML),
-    discoveryPage: Handlebars.compile(document.querySelector(select.templatesOf.discoverPage).innerHTML),
+    discoverPage: Handlebars.compile(document.querySelector(select.templatesOf.discoverPage).innerHTML),
     song: Handlebars.compile(document.querySelector(select.templatesOf.song).innerHTML),
+    discoverRefresh: Handlebars.compile(document.querySelector(select.templatesOf.discoverRefresh).innerHTML),
 }

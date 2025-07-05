@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wdth,wght@150,200..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Signika:wght@300..700&display=swap://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
 :root {
   --color-bg: #121212;
   --color-text-main: #FFFFFF;
@@ -5,9 +7,10 @@
   --color-accent: #D64949;
   --font-main: 'Montserrat', sans-serif;
 
-  --text-logo: 100px;
-  --text-nav: 16px;
+  --text-logo: 120px;
+  --text-nav: 22px;
   --text-header: 36px;
-  --text-subheader: 16px;
+  --text-subheader: 26px;
   --text-small: 12px;
+  --text-button: 10px;
 }
