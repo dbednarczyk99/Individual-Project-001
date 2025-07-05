@@ -1,2 +1,2 @@
-The app was published on Replit.com. Here is the link to the finished site:
-[TASTE - Engage in Art](https://7f75a587-7618-4a2e-80e5-b8957ed798eb-00-1slivl85421lz.riker.replit.dev)
+Hi! I'm thrilled to share that this is my first solo project, and it's a crucial step in my journey to become a full-stack developer. I invite you to take a look at the source code and the final result.
+[Check out this link!](https://7f75a587-7618-4a2e-80e5-b8957ed798eb-00-1slivl85421lz.riker.replit.dev)
