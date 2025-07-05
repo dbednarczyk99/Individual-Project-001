@@ -8,7 +8,6 @@
         "init:dirs": "mkdirp dist src/sass src/css src/vendor src/images src/js",
         "init:files": "touch README.md src/index.html src/sass/style.scss src/js/script.js",
         "init:gitignore": "curl -k https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore",
-        "init:gitignore:custom": "echo \"dist\" >> .gitignore",
         "test": "npm-run-all test:*",
         "test:html": "html-validate src/*.html",
         "test:js": "eslint --fix src/js/",
@@ -49,6 +48,7 @@
         "stylelint-scss": "^4.3.0"
     },
     "dependencies": {
+        "http-server": "^14.1.1",
         "json-server": "^0.17.4"
     }
 }
