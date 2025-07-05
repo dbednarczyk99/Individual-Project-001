@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="https://i.postimg.cc/7hcbFbSK/T-1.png" type="image/x-icon">
+  <title>TASTE - Engage in art</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,300i,700%7COswald:300,500,700&amp;subset=latin-ext" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v6.7.2/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/greghub/green-audio-player/dist/css/green-audio-player.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__content container">
+      <div class="header__text">
+        <h1 class="header__title">TASTE</h1>
+        <p class="header__subtitle">Engage<br>in<br>art</p>
+      </div>
+    </div>
+  </header>
+  <section class="navigation">
+    <nav class="main-nav">
+        <a href="#home">Home</a>
+        <a href="#search">Search</a>
+        <a href="#discover">Discover</a>
+    </nav>
+  </section>
+
+  <div id="pages">
+    <section id="home" class="active">
+      <div class="home-wrapper container"></div>
+    </section>
+    <section id="search">
+      <div class="search-wrapper container"></div>
+    </section>
+    <section id="discover">
+      <div class="discover-wrapper container"></div>
+    </section>
+  </div>
+
+  <footer class="footer">
+    <div class="footer__content container">
+        <h3>All rights reserved</h3>
+    </div>
+  </footer>
+
+  <script id="template-homePage" type="text/x-handlebars-template">
+    <div class="home-page-wrapper container">
+      <div class="home-categories">
+        <span class="label">Categories:</span>
+        {{#each categories}}
+          <span class="category-item{{#ifEquals this ../activeCategory}} active{{/ifEquals}}">
+            {{this}}</span><span>{{#unless @last}}, {{/unless}}</span>
+        {{/each}}
+      </div>
+      <div class="songs-wrapper">
+        
+      </div>
+      <div class="subscribe-section">
+        <div class="subscribe-overlay">
+          <div class="subscribe-content">
+            <div class="subscribe-title">
+              <span class="thin">SUBSCRIBE </span><span class="bold"> NOW</span>
+            </div>
+            <div class="subscribe-content">
+              <div class="subscribe-row1">
+                <button class="subscribe-button">JOIN NOW</button>
+                <img src="images/artist.jpg" alt="Album cover" />
+              </div>
+              <div class="subscribe-row2">
+                <p class="album-desc">NEW ALBUM</p>
+                <p class="album-desc line2">Available only for subscribers</p>
+              </div>
+              <div class="subscribe-hover">
+                <p class="artist-name">
+                <span class="first name">Dean</span><span class="name"></span><br>
+                <span class="last-white name">Hen</span><span class="last-red name">son</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </script>
+
+  <script id="template-searchPage" type="text/x-handlebars-template">
+    <div class="search-page-wrapper container">  
+      <div class="search-bar">
+          <form class="search-form">
+            <div class="search-form-row">
+              <label for="search-input">Name</label>
+              <input type="search" class="search-input search-form-item" id="search-input">
+              <label for="search-category-select">Category</label>
+              <select name="categories" id="search-category-select" class="search-category-select search-form-item">
+                <option value=""></option>
+                {{#each categories}}
+                  <option value="{{this}}">{{this}}</option>
+                {{/each}}
+              </select>
+            </div>
+            <button type="submit" class="search-button">Search</button>
+          </form>
+      </div>
+      <div class="songs-wrapper">
+          
+      </div>
+    </div>
+  </script>
+
+  <script id="template-discoverPage" type="text/x-handlebars-template">
+    <div class="discover-page-wrapper container">
+      <div class="songs-wrapper discover-song">
+
+      </div>
+    </div>
+  </script>
+
+  <script id="template-song" type="text/x-handlebars-template">
+    <div class="song">
+      <h2 class="song__title">{{author}} - {{title}}</h2>
+      <div class="{{location}}_audio-player_{{id}}">
+        <audio>
+          <source src="songs/{{filename}}" type="audio/mpeg">
+        </audio>
+      </div>
+      <div class="song__description">
+        <p>Categories: 
+          {{#each categories}}
+            <span class="song__category">{{this}}{{#unless @last}}, {{/unless}}</span>
+          {{/each}}
+        </p>
+        <p>#{{ranking}} in the ranking</p>
+    </div>
+  </script>
+
+  <script id="template-discoverRefresh" type="text/x-handlebars-template">
+    <div class="discover-refresh-wrapper container">
+      <p>Based on the songs you've listened to before, we've chosen something new for you.</p>
+      <button class="discover-refresh-button"><p>Refresh </p><i class="fa-solid fa-rotate-right"></i></button>
+    </div>
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/gh/greghub/green-audio-player/dist/js/green-audio-player.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
+  <script src="js/app.js" type="module"></script>
+</body>
+</html>
