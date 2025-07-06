@@ -26,8 +26,8 @@ section {
 }
 .songs-wrapper { 
   margin: auto;
-  width: 500px;
-  max-width: 600px;
+  min-width: 300px;
+  max-width: 500px;
 }
 
 #pages > section {

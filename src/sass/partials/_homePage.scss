@@ -24,93 +24,92 @@
   .subscribe-overlay {
     background-color: rgba(78, 78, 78, 0.3);
     height: 1020px;
+    width: 100%;
     display: flex;
+    justify-content: center;
   }
 
-  .subscribe-content {
-    width: 1200px;
-    margin: auto;
-    
-  }
+   .subscribe-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: var(--subscribe-width);
+   }
 
   .subscribe-title {
+    position: absolute;
     text-align: center;
-    transform: translateY(-180px);
-    font-size: 72px;
+    transform: translateY(var(--transform-subscribe));
+    font-size: var(--text-subscribe);
     letter-spacing: 12px;
-    margin-right: -12px;
+    width: 100%;
     .bold {
       font-weight: 1000;
     }
     .thin {
       font-weight: 500;
+      padding-left: 12px;
     }
   }
-  .subscribe-row1 {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    padding: 0 20px;
-      
-    img {
-      width: 470px;
-      height: 580px;
+  .subscribe-inner {
+
+    .subscribe-subtext {
+      display: flex;
+      flex-direction: column;
+      font-size: var(--subtext);
+      font-weight: 600;
+      text-align: end;
+      width: 100%;
+      //text-wrap: nowrap;
+
+      .line1 {
+        color: var(--color-text-subtle);
       }
 
+      .album-desc {
+        letter-spacing: 10px;
+      }
+    }
+
     button {
-      height: 130px;
-      width: 310px;
+      height: 110px;
+      width: 290px;
       font-size: 32px;
       font-weight: 800;
-      padding: 0;
+      padding: 10px;
       letter-spacing: 7px;
-      transform: translateY(300px);
     } 
   }
 
-  .subscribe-hover {
-    display: grid;
-    position: absolute;
-
-    transform: translate(415px, -500px);
-
-    .artist-name {
-      .name {
-        display: inline-block;
-        width: 300px;
-        font-size: 75px;
-        font-weight: 1000;
-        letter-spacing: 8px;
-      }
-
-      .last-white, .first {
-        text-align: end;
-      }
-
-      .last-red {
-        color: var(--color-accent);
-      }
-      .first {
-        padding-right: 8px;
-      }
-    }
-
-
+  .subscribe-inner-box, .subscribe-subtext, .subscribe-image-box{
+    margin: 0;
+    padding: 0;
   }
 
-  .subscribe-row2 {
-    margin-top: 25px;
-    .album-desc {
-      text-align: end;
-      width: 100%;
-      font-size: 30px;
-      font-weight: 600;
-      letter-spacing: 10px;
-      color: var(--color-text-subtle);
-      margin: 0;
-    }
-    .line2 {
-      color: var(--color-text-main);
-    }
-  }
+  .box-image {
+    display: block;
+    width: 100%;
+    max-height: 700px;
+    z-index: 2;
 }
+
+.box-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+}
+
+// @media (max-width: 992px) {
+//   .subscribe-inner-box button {
+//     transform: translate(-180px, -250px);
+//   }
+// }
+
+// @media (max-width: 768px) {
+//   .subscribe-inner-box button {
+//     transform: translate(-120px, -250px);
+//   }
+// }

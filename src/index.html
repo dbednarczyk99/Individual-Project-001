@@ -8,13 +8,14 @@
   <title>TASTE - Engage in art</title>
   <link href="https://fonts.googleapis.com/css?family=Lato:400,300i,700%7COswald:300,500,700&amp;subset=latin-ext" rel="stylesheet">
   <link href="https://use.fontawesome.com/releases/v6.7.2/css/all.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/greghub/green-audio-player/dist/css/green-audio-player.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
   <header class="header">
-    <div class="header__content container">
+    <div class="header__content">
       <div class="header__text">
         <h1 class="header__title">TASTE</h1>
         <p class="header__subtitle">Engage<br>in<br>art</p>
@@ -31,26 +32,26 @@
 
   <div id="pages">
     <section id="home" class="active">
-      <div class="home-wrapper container"></div>
+      <div class="home-wrapper"></div>
     </section>
     <section id="search">
-      <div class="search-wrapper container"></div>
+      <div class="search-wrapper"></div>
     </section>
     <section id="discover">
-      <div class="discover-wrapper container"></div>
+      <div class="discover-wrapper"></div>
     </section>
   </div>
 
   <footer class="footer">
-    <div class="footer__content container">
+    <div class="footer__content">
         <h3>All rights reserved</h3>
     </div>
   </footer>
 
   <script id="template-homePage" type="text/x-handlebars-template">
-    <div class="home-page-wrapper container">
+    <div class="home-page-wrapper">
       <div class="home-categories">
-        <span class="label">Categories:</span>
+        <span>Categories:</span>
         {{#each categories}}
           <span class="category-item{{#ifEquals this ../activeCategory}} active{{/ifEquals}}">
             {{this}}</span><span>{{#unless @last}}, {{/unless}}</span>
@@ -65,21 +66,21 @@
             <div class="subscribe-title">
               <span class="thin">SUBSCRIBE </span><span class="bold"> NOW</span>
             </div>
-            <div class="subscribe-content">
-              <div class="subscribe-row1">
+            <div class="subscribe-inner row w-100 w-lg-70 w-md-90 d-flex justify-content-center align-items-center">
+              
+              <div class="subscribe-inner-box d-flex justify-content-center justify-content-lg-end order-3 order-lg-1 col-12 col-lg-4">
                 <button class="subscribe-button">JOIN NOW</button>
-                <img src="images/artist.jpg" alt="Album cover" />
               </div>
-              <div class="subscribe-row2">
-                <p class="album-desc">NEW ALBUM</p>
+              
+              <div class="subscribe-image-box d-flex justify-content-center justify-content-lg-end order-1 order-lg-2 col-12 col-lg-8">
+                <div class="box-image"><img src="images/artist2.png" alt="img"/></div>
+              </div>
+                  
+              <div class="subscribe-subtext d-flex justify-content-center order-2 order-lg-3 col-12 col-lg-8">
+                <p class="album-desc line1">NEW ALBUM</p>
                 <p class="album-desc line2">Available only for subscribers</p>
               </div>
-              <div class="subscribe-hover">
-                <p class="artist-name">
-                <span class="first name">Dean</span><span class="name"></span><br>
-                <span class="last-white name">Hen</span><span class="last-red name">son</span>
-                </p>
-              </div>
+                          
             </div>
           </div>
         </div>
@@ -91,16 +92,16 @@
     <div class="search-page-wrapper container">  
       <div class="search-bar">
           <form class="search-form">
-            <div class="search-form-row">
-              <label for="search-input">Name</label>
-              <input type="search" class="search-input search-form-item" id="search-input">
-              <label for="search-category-select">Category</label>
-              <select name="categories" id="search-category-select" class="search-category-select search-form-item">
+            <div class="form row d-flex justify-content-center align-items-center">
+              <div class="col-5 col-md-2 label"><label for="search-input">Name</label></div>
+              <div class="col-7 col-md-4"><input type="search" class="search-input search-form-item" id="search-input"></div>
+              <div class="col-5 col-md-2 label"><label for="search-category-select">Category</label></div>
+              <div class="col-7 col-md-4"><select name="categories" id="search-category-select" class="search-category-select search-form-item">
                 <option value=""></option>
                 {{#each categories}}
-                  <option value="{{this}}">{{this}}</option>
-                {{/each}}
-              </select>
+                <option value="{{this}}">{{this}}</option>
+                {{/each}}  
+              </select></div>
             </div>
             <button type="submit" class="search-button">Search</button>
           </form>
@@ -146,6 +147,7 @@
 
   <script src="https://cdn.jsdelivr.net/gh/greghub/green-audio-player/dist/js/green-audio-player.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   <script src="js/app.js" type="module"></script>
 </body>
 </html>

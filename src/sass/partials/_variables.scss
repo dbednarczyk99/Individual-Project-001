@@ -13,4 +13,51 @@
   --text-subheader: 26px;
   --text-small: 12px;
   --text-button: 10px;
+
+  --subtext: 40px;
+
+
+  --text-subscribe: 72px;
+  --transform-subscribe: -510px;
+
+  --text-artist: 72px;
+
+  --spacing-logo: 90px;
+  --margin-logo-left: 50px;
+  --nav-bar-width: 40%;
+
+  --subscribe-width: 80%;
+
+  @media (max-width: 992px) {
+  --text-logo: 90px;
+  --spacing-logo: 40px;
+  --margin-logo-left: 20px;
+  --nav-bar-width: 70%;
+
+  --text-subscribe: 58px;
+  --transform-subscribe: -510px;
+
+  --subtext: 30px;
+
+  }
+
+  @media (max-width: 768px){
+  --text-logo: 60px;
+  --spacing-logo: 20px;
+  --nav-bar-width: 90%;
+
+  --text-subscribe: 40px;
+  --transform-subscribe: -510px;
+  --subtext: 20px;
+
+  }
+
+  @media (max-width: 576px){
+  --text-subscribe: 40px;
+  --transform-subscribe: -510px;
+
+  --text-nav: 18px;
+    
+  }
 }
+

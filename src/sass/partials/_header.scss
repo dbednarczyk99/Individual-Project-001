@@ -21,8 +21,8 @@ header {
         font-size: var(--text-logo);
         font-family: var(--font-main);
         font-weight: 900;
-        letter-spacing: 90px;
-        margin-left: 50px;
+        letter-spacing: var(--spacing-logo);
+        margin-left: var(--margin-logo-left);
         margin-top: 0;
         margin-bottom: 10px;
     }
@@ -39,7 +39,8 @@ header {
 
 
 .navigation {
-  width: 600px;
+  width: var(--nav-bar-width);
+  //max-width: 80%;
 }
 nav {
   display: flex;
@@ -54,6 +55,7 @@ nav {
   a {
     text-decoration: none;
     color: var(--color-text-subtle);
+    margin: 0 10px;
   }
 
   a.active {
