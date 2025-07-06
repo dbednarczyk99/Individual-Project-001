@@ -2,9 +2,6 @@ export const settings = {
   db: {
     url: '//' + window.location.hostname + (window.location.hostname == 'localhost' ? ':3131' : ''),
   },
-  songDb: {
-    url: '//' + window.location.hostname + (window.location.hostname == 'localhost' ? ':3000' : ''),
-  }
 }
 
 export const select = {
